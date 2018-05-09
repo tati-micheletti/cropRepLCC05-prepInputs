@@ -1,3 +1,1 @@
-
-Any other details that a user may need to know, like where to get more information,
-where to download data, etc.
+Inside the module there are different maps and study areas using rasterToMatch argument from prepInputs. All cases where  rasterToMatch is used fail to return mySimOut or errors.
