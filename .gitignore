@@ -1,0 +1,5 @@
+*cache/*
+*.Rproj.user/*
+*/data/*
+data/*
+data/

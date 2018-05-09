@@ -1,0 +1,77 @@
+---
+title: "prepInputsProblems"
+author: ""
+date: "08 May 2018"
+output: pdf_document
+---
+
+# Overview
+
+Provide an overview of what the module does / how to use the module.
+
+Module documentation should be written so that others can use your module.
+This is a template for module documentation, and should be changed to reflect your module.
+
+## R Markdown
+
+R Markdown syntax allows R code, outputs, and figures to be rendered in the documentation.
+
+For help writing in R Markdown, see http://rmarkdown.rstudio.com/.
+
+# Usage
+
+```{r module_usage}
+library(SpaDES)
+
+  workDirectory <- getwd()
+  
+  paths <- list(
+    cachePath = file.path(workDirectory, "cache"),
+    modulePath = file.path(workDirectory, "modules"),
+    inputPath = file.path(workDirectory, "inputs"),
+    outputPath = file.path(workDirectory, "outputs")
+  )
+  
+  setPaths(modulePath = paths$modulePath, inputPath = paths$inputPath, outputPath = paths$outputPath, cachePath = paths$cachePath)
+  
+times <- list(start = 0, end = 1)
+
+parameters <- list()
+modules <- list("prepInputsProblems")
+objects <- list() #polyMatrix = matrix(c(-121.85, 53.04), ncol = 2))
+inputs <- list()
+outputs <- list()
+
+mySim <- simInit(times = times, params = parameters, modules = modules,objects = objects)
+
+mySimOut <- spades(mySim)
+
+```
+
+# Events
+
+Describe what happens for each event type.
+
+## Plotting
+
+Write what is plotted.
+
+## Saving
+
+Write what is saved.
+
+# Data dependencies
+
+## Input data
+
+How to obtain input data, and a description of the data required by the module.
+If `sourceURL` is specified, `downloadData("prepInputsProblems", "path/to/modules/dir")` may be sufficient.
+
+## Output data
+
+Description of the module outputs.
+
+# Links to other modules
+
+Describe any anticipated linkages to other modules.
+
